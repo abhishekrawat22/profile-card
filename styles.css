@@ -1,0 +1,150 @@
+h1,
+h2,
+p,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 8px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: linear-gradient(to top right, #EEBE6C 0%, #CA7C4E 100%);
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  height: 320px;
+  transform: translate(-50%, -50%);
+  background-color: #FFF;
+  border-radius: 4px;
+  box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+.center .profile-wrapper {
+  display: flex;
+  height: inherit;
+}
+.center .profile-wrapper .profile {
+  display: grid;
+  flex: 1;
+  place-items: center;
+  padding: 2.5rem 1rem;
+}
+.center .profile-wrapper .profile .display-image {
+  position: relative;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.center .profile-wrapper .profile .display-image::after, .center .profile-wrapper .profile .display-image::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #786450;
+  transition: 1.5s ease-in-out;
+  transform: rotate(0deg);
+}
+.center .profile-wrapper .profile .display-image::before {
+  border-right-color: transparent;
+  width: 92px;
+  height: 92px;
+}
+.center .profile-wrapper .profile .display-image::after {
+  border-left-color: transparent;
+  width: 85px;
+  height: 85px;
+}
+.center .profile-wrapper .profile .display-image:hover::after {
+  transition: 1.5s ease-in-out;
+  transform: rotate(360deg);
+}
+.center .profile-wrapper .profile .display-image:hover::before {
+  transition: 1.5s ease-in-out;
+  transform: rotate(-360deg);
+}
+.center .profile-wrapper .profile .display-image img {
+  border-radius: inherit;
+  max-width: 80px;
+}
+.center .profile-wrapper .profile .profile-about h1 {
+  color: #786450;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.center .profile-wrapper .profile .profile-about p {
+  color: #786450;
+  font-size: 11px;
+  line-height: 15px;
+  text-align: center;
+}
+.center .profile-wrapper .profile .action-btns {
+  display: grid;
+  place-items: center;
+  margin-top: 33px;
+  row-gap: 10px;
+}
+.center .profile-wrapper .profile .action-btns a {
+  border: 1px solid #786450;
+  border-radius: 100px;
+  width: 100px;
+  text-align: center;
+  color: #786450;
+  padding: 7px 9px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: 0.4s;
+}
+.center .profile-wrapper .profile .action-btns a:hover {
+  background-color: #786450;
+  color: #fff;
+}
+.center .profile-wrapper .profile-numbers {
+  display: grid;
+  row-gap: 2px;
+}
+.center .profile-wrapper .profile-numbers div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #F5E8DF;
+  align-items: center;
+  width: 120px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.center .profile-wrapper .profile-numbers div:hover {
+  background-color: #E1CFC2;
+}
+.center .profile-wrapper .profile-numbers div h2,
+.center .profile-wrapper .profile-numbers div p {
+  color: #786450;
+}
+.center .profile-wrapper .profile-numbers div h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.center .profile-wrapper .profile-numbers div p {
+  font-size: 11px;
+}
